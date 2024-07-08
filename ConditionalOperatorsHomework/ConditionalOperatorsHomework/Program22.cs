@@ -7,15 +7,18 @@ namespace ConditionalOperatorsHomework
         static void Main(string[] args)
         {
             bool isWork = true;
+
             Console.WriteLine("Чтобы завершить программу введите 'exit'");
 
             while (isWork)
             {
+                string exit = "exit";
+
                 string userInput;
                 Console.WriteLine("Введите команду:");
                 userInput = Console.ReadLine();
 
-                if(userInput == "exit")
+                if(userInput == exit)
                 {
                     isWork = false;
                 }
