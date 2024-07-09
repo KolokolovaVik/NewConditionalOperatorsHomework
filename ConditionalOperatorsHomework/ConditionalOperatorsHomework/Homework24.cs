@@ -9,13 +9,13 @@ namespace ConditionalOperatorsHomework
             int sum = 0;
             Random random = new Random();
 
-            int number;
+            int randomNumber;
 
-            number = random.Next(0, 100);
+            randomNumber = random.Next(0, 100);
             Console.WriteLine("Найдём рандомное число не больше 100.");
-            Console.WriteLine($"Рандомное число: {number}.");
+            Console.WriteLine($"Рандомное число: {randomNumber}.");
 
-            for (int i = 0; i <= number; i++)
+            for (int i = 0; i <= randomNumber; i++)
             {
                 if (i % 3 == 0 || i % 5 == 0)
                 {
@@ -23,7 +23,7 @@ namespace ConditionalOperatorsHomework
                 }
             }
 
-            Console.WriteLine($"\nСумма положительных чисел меньше {number}(включая число), которые кратны 3 или 5 равна: {sum}");
+            Console.WriteLine($"\nСумма положительных чисел меньше {randomNumber}(включая число), которые кратны 3 или 5 равна: {sum}");
         }
     }
 }
