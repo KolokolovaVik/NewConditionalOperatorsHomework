@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Homework23.cs" />
     <Compile Include="Homework24.cs" />
+    <Compile Include="Homework25.cs" />
     <Compile Include="Program22.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
