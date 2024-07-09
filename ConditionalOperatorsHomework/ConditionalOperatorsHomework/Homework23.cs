@@ -18,9 +18,9 @@ namespace ConditionalOperatorsHomework
             maximumNumber = Convert.ToInt32(Console.ReadLine());
             Console.Write("Последовательность: ");
 
-            for (initialNumber = 5; initialNumber <= maximumNumber; initialNumber += interval)
+            for (int i = initialNumber; i <= maximumNumber; i += interval)
             {
-                Console.Write(initialNumber + " ");
+                Console.Write(i + " ");
             }
         }
     }
