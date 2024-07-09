@@ -7,19 +7,20 @@ namespace ConditionalOperatorsHomework
         static void Main(string[] args)
         {
             int interval = 7;
-
+            int initialNumber = 5;
+            
             int maximumNumber;
-           
-            Console.WriteLine("Программа выводит последовательность чисел, с прибавлением к последнему числу: 7." +
-                "\nНачальное число последовательности: 5. " +
+
+            Console.WriteLine($"Программа выводит последовательность чисел, с прибавлением к последнему числу: {interval}." +
+                $"\nНачальное число последовательности: {initialNumber}. " +
                 "\nМаскимальный предел последовательности определяете вы сами.");
             Console.WriteLine("\nВведите максимальное число: ");
             maximumNumber = Convert.ToInt32(Console.ReadLine());
             Console.Write("Последовательность: ");
 
-            for (int i = 5; i <= maximumNumber; i += interval)
+            for (initialNumber = 5; initialNumber <= maximumNumber; initialNumber += interval)
             {
-                Console.Write(i + " ");
+                Console.Write(initialNumber + " ");
             }
         }
     }
