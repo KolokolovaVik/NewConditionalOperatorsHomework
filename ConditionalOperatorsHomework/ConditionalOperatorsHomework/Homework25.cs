@@ -6,6 +6,12 @@ namespace ConditionalOperatorsHomework
     {
         static void Main(string[] args)
         {
+            const string CommandShowText = "1";
+            const string CommandShowDateTimeNow = "2";
+            const string CommandShowRandomNumber = "3";
+            const string CommandClearConsole = "4";
+            const string CommandExit = "5";
+
             bool isWork = true;
             Random random = new Random();
 
@@ -13,33 +19,37 @@ namespace ConditionalOperatorsHomework
             {
                 string userInput;
                 Console.WriteLine("Добро пожаловать в программу. Введите номер команды:" +
-                    "\n1 - Вывести на экран ваши фамилию и имя." +
-                    "\n2 - Вывести на экран сегодняшнюю дату и время на вашем компьютере." +
-                    "\n3 - Показать случайное число." +
-                    "\n4 - Очистить консоль." +
-                    "\n5 - Выход из программы.");
+                    $"\n{CommandShowText} - Вывести на экран ваши фамилию и имя." +
+                    $"\n{CommandShowDateTimeNow} - Вывести на экран сегодняшнюю дату и время на вашем компьютере." +
+                    $"\n{CommandShowRandomNumber} - Показать случайное число." +
+                    $"\n{CommandClearConsole} - Очистить консоль." +
+                    $"\n{CommandExit} - Выход из программы.");
 
                 userInput = Console.ReadLine();
                 switch (userInput)
                 {
-                    case "1":
+                    case CommandShowText:
                         Console.WriteLine("Как вас зовут?");
                         string name = Console.ReadLine();
                         Console.WriteLine("Введите вашу фамилию:");
                         string surname = Console.ReadLine();
                         Console.WriteLine($"Вас зовут: {name}. Ваша фамилия: {surname}");
                         break;
-                    case "2":
+                    case CommandShowDateTimeNow:
                         Console.WriteLine($"Дата и время на компьютере:{DateTime.Now}");
                         break;
-                    case "3":
+                    case CommandShowRandomNumber:
                         Console.WriteLine($"Рандомное число: {random.Next()}");
                         break;
-                    case "4":
+                    case CommandClearConsole:
                         Console.Clear();
                         break;
-                    case "5":
+                    case CommandExit:
                         isWork = false;
+                        Console.WriteLine("Программа завершила своё выполнение.");
+                        break;
+                    default:
+                        Console.WriteLine("Такой команды нет!");
                         break;
                 }
             }
