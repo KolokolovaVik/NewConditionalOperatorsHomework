@@ -7,23 +7,28 @@ namespace ConditionalOperatorsHomework
         static void Main(string[] args)
         {
             int sum = 0;
+            int minRandomNumberRange = 0;
+            int maxRandomNumberRange = 100;
+            int divider1 = 3;
+            int divider2 = 5;
             Random random = new Random();
 
             int randomNumber;
 
-            randomNumber = random.Next(0, 100);
-            Console.WriteLine("Найдём рандомное число не больше 100.");
+            randomNumber = random.Next(minRandomNumberRange, maxRandomNumberRange + 1);
+            Console.WriteLine($"Найдём рандомное число не больше {maxRandomNumberRange}.");
             Console.WriteLine($"Рандомное число: {randomNumber}.");
 
             for (int i = 0; i <= randomNumber; i++)
             {
-                if (i % 3 == 0 || i % 5 == 0)
+                if (i % divider1 == 0 || i % divider2 == 0)
                 {
                     sum += i;
                 }
             }
 
-            Console.WriteLine($"\nСумма положительных чисел меньше {randomNumber}(включая число), которые кратны 3 или 5 равна: {sum}");
+            Console.WriteLine($"\nСумма положительных чисел меньше {randomNumber}(включая число), " +
+                $"которые кратны {divider1} или {divider2} равна: {sum}");
         }
     }
 }
