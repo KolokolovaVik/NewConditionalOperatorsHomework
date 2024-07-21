@@ -6,24 +6,22 @@ namespace ConditionalOperatorsHomework
     {
         static void Main(string[] args)
         {
-            int additionalNumberCharacters = 2;
+            string symbolBoundary = "";
 
             Console.Write("Введите символ для вывода:");
             string symbol = Console.ReadLine();
             Console.Write("Введите имя для вывода:");
             string name = Console.ReadLine();
+            string outputText = symbol + name + symbol;
 
-            for (int i = 0; i < name.Length + additionalNumberCharacters; i++)
+            for (int i = 0; i < outputText.Length; i++)
             {
-                Console.Write(symbol);
+                symbolBoundary += symbol;
             }
 
-            Console.WriteLine($"\n{symbol}{name}{symbol}");
-
-            for (int i = 0; i < name.Length + additionalNumberCharacters; i++)
-            {
-                Console.Write(symbol);
-            }
+            Console.WriteLine(symbolBoundary);
+            Console.WriteLine(outputText);
+            Console.WriteLine(symbolBoundary);
         }
     }
 }
