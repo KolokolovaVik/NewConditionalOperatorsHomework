@@ -47,6 +47,7 @@
     <Compile Include="Homework24.cs" />
     <Compile Include="Homework25.cs" />
     <Compile Include="Homework26.cs" />
+    <Compile Include="Homework28.cs" />
     <Compile Include="Homeworl27.cs" />
     <Compile Include="Program22.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
