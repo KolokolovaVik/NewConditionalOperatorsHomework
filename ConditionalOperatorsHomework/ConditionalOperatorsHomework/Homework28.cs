@@ -22,7 +22,7 @@ namespace ConditionalOperatorsHomework
                 else
                 {
                     Console.WriteLine("Пароль неверен. Попробуйте ещё раз!");
-                        tryCount--;
+                    tryCount--;
                 }
             }
         }
