@@ -18,7 +18,7 @@
 
 //            for (int i = numberN; i <= maximumNumber; i += numberN)
 //            {
-//                if (minNumber <= i && i <= maximumNumber)
+//                if (minNumber <= i)
 //                {
 //                    countNumber += 1;
 //                }
@@ -27,4 +27,5 @@
 //                $" и меньше {maximumNumber} в количестве составляют: {countNumber} ");
 //        }
 //    }
+
 //}
