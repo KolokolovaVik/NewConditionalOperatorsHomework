@@ -6,8 +6,8 @@ namespace ConditionalOperatorsHomework
     {
         static void Main(string[] args)
         {
-            int baseNumber = 2;
             int exponent = 1;
+            int baseNumber = 2;
             int result = 1;
 
             Random random = new Random();
@@ -15,21 +15,12 @@ namespace ConditionalOperatorsHomework
 
             Console.WriteLine($"Рандомное число: {randomNumber}");
 
-            for (int i = exponent; i <= randomNumber; i++)
+            for (int i = exponent; result <= randomNumber; i++)
             {
                 result *= baseNumber;
-
-                if (randomNumber <= result)
-                {
-                    if (randomNumber == result)
-                    {
-                        result *= baseNumber;
-                        i++;
-                    }
-                    Console.WriteLine($"Следующее число двойки: {result}. {baseNumber} в степени {i}.");
-                    break;
-                }
+                exponent = i;
             }
+            Console.WriteLine($"Следующее число двойки: {result}. {baseNumber} в степени {exponent}.");
         }
     }
 
