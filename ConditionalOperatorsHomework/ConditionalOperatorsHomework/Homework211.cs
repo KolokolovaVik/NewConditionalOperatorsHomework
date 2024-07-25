@@ -6,10 +6,10 @@ namespace ConditionalOperatorsHomework
     {
         static void Main(string[] args)
         {
-            const string CommandAttackHero = "1";
-            const string CommandFireballAttackHero = "2";
-            const string CommandExplosionAttackHero = "3";
-            const string CommandTreatmentHero = "4";
+            const string CommandAttack = "1";
+            const string CommandFireballAttack = "2";
+            const string CommandExplosionAttack = "3";
+            const string CommandTreatment = "4";
 
             int minAttackBoss = 10;
             int maxAttackBoss = 45;
@@ -44,22 +44,22 @@ namespace ConditionalOperatorsHomework
             while (healthBoss > 0 && healthHero > 0)
             {
                 Console.WriteLine($"\nВыберите, какую способность использовать герою:" +
-                    $"\n{CommandAttackHero} - Нанести обычную атаку." +
-                    $"\n{CommandFireballAttackHero} - Нанести атаку огненным шаром (тратит ману). " +
+                    $"\n{CommandAttack} - Нанести обычную атаку." +
+                    $"\n{CommandFireballAttack} - Нанести атаку огненным шаром (тратит ману). " +
                     $"Способность можно использовать только, когда у героя есть мана." +
-                    $"\n{CommandExplosionAttackHero} - Нанести урон взрывом. Может быть нанесён только после использования огненного шара, каждый раз." +
-                    $"\n{CommandTreatmentHero} - Лечить здоровье и ману. Осталось {countRecoveries} лечение.");
+                    $"\n{CommandExplosionAttack} - Нанести урон взрывом. Может быть нанесён только после использования огненного шара, каждый раз." +
+                    $"\n{CommandTreatment} - Лечить здоровье и ману. Осталось {countRecoveries} лечение.");
 
                 userInput = Console.ReadLine();
 
                 switch (userInput)
                 {
-                    case CommandAttackHero:
+                    case CommandAttack:
                         Console.WriteLine("\nСовершена обычная атака на босса.");
                         healthBoss -= attackHero;
                         break;
 
-                    case CommandFireballAttackHero:
+                    case CommandFireballAttack:
                         if (countMana > 0)
                         {
                             Console.WriteLine("\nСовершена атака на босса огненным шаром.");
@@ -73,7 +73,7 @@ namespace ConditionalOperatorsHomework
                         }
                         break;
 
-                    case CommandExplosionAttackHero:
+                    case CommandExplosionAttack:
                         if (isFireballAttack == true)
                         {
                             Console.WriteLine("\nСовершена атака на босса взрывом.");
@@ -86,7 +86,7 @@ namespace ConditionalOperatorsHomework
                         }
                         break;
 
-                    case CommandTreatmentHero:
+                    case CommandTreatment:
                         if (countRecoveries > 0)
                         {
                             Console.WriteLine("\nГерой восстановил здоровье и ману.");
@@ -131,6 +131,4 @@ namespace ConditionalOperatorsHomework
             }
         }
     }
-
 }
-
